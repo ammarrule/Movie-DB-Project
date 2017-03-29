@@ -1,0 +1,53 @@
+<html>
+    <head>
+        <title>Home</title>
+        <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Monofett">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+        <link rel="stylesheet" href="/styles.css">        
+    </head>
+
+    <body class="body-img">
+        <nav class="navbar navbar-default bar-nav">
+            <div class="title"><h1 class="text-center">Movie Database</h1></div>
+            <div class="search-container">
+                <input type="text" class="form-control search-form" placeholder="Search Movies" id="search">
+                <button class="btn btn-search" id="go">GO</button>
+            </div>
+            <div class="container-fluid"></div>
+            <div class="navbar-header"></div>  
+        </nav>
+         
+            
+            <div class="container cntnr">      
+
+            <% for(let i = 0; i < list.length; i++){%>              
+            
+            <a class="movie-link" href="/movie/<%= list[i].id %>">
+            <div class="media movie-list-item">
+                <div class="media-left">
+                    <div class="poster-container">
+                        <img class="media-object movie-poster" src="<%= list[i].poster %>"/>
+                    </div>
+                </div>
+                <div class="media-body">
+                    <h4 class="media-heading">
+                        <%= list[i].title %>
+                        <span class="badge bdge"><%= list[i].imdbRating %></span>
+                    </h4>
+                    <div>
+                        <%= list[i].plot %>
+                    </div>
+                    <div class="released-date">
+                        Released: <%= list[i].released %>
+                    </div>
+                </div>
+            </div>
+            </a>
+            
+            <% } %>
+        </div>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+        <script src="app.js"></script>
+    </body>
+</html>

@@ -1,0 +1,41 @@
+<html>
+    <head>
+        <title>Home</title>
+        <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Monofett">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+        <link rel="stylesheet" href="/styles.css">        
+    </head>
+
+    <body class="body-img">
+     <nav class="navbar navbar-default bar-nav">
+            <div class="title"><h1 class="text-center">Movie Database</h1></div>
+            <div class="search-container">
+                <a href="http://localhost:8080"><button class="btn btn-back">Back to Main</button></a>
+            </div>
+            <div class="container-fluid"></div>
+            <div class="navbar-header"></div>  
+        </nav>
+        <div class="container cntnr">
+            <div id="movie-details">
+                <h1 class="text-center"><%=movie.title %></h1>
+                <div class="row">
+                    <div class="col-xs-5">
+                        <img class="movie-poster"   src="<%=movie.poster %>" />
+                    </div>
+                    <div class="col-xs-7">
+                        <table class="table">
+                   
+                        <% for (let moviekeys in movie) {%>                           
+                            <tr>
+                                <td><%= moviekeys %></td>
+                                <td><%= movie[moviekeys] %></td>
+                            </tr>
+                        <% }%>  
+                        </table>
+                    </div>    
+                </div>               
+            </div>
+        </div>
+    </body>
+</html>
+

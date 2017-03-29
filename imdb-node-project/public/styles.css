@@ -1,0 +1,107 @@
+body{
+  background-color:darkgray;
+}
+
+.body-img {
+  background-image: url("images/theatre.jpg");
+  background-size: contain;
+}
+
+.bar-nav {
+  background-color: black;
+  border: none;
+  height: 26px;
+  position: relative;
+}
+
+.title{
+  font-family: Monofett;
+  color: whitesmoke;
+  position: absolute;
+  bottom: -9%;
+  left: 39%;
+}
+.title h1{
+  font-size: 45px;
+}
+
+
+.cntnr {
+  background-color: lightgrey;
+}
+
+.search-form{
+  width: 327px;
+  position: absolute;
+  top: 16%;
+  left:1%;
+}
+
+.btn-search{
+  color: black;
+  background-color: #F7CB06;
+  border-radius: 15px;
+  position: absolute;
+  top: 16%;
+  left: 26%;
+}
+
+.btn-back {
+  color: black;
+  background-color: #F7CB06;
+  border-radius: 15px;
+  position: absolute;
+  top: 16%;
+  left: 1%;
+}
+
+.btn-search:hover{
+  background-color: #F7E17C;
+  color: whitesmoke;
+}
+.movie-list-item {
+  padding: 10px;
+  cursor: pointer;
+}
+
+.movie-list-item:hover {
+  background-color: #eee;
+}
+
+.movie-list-item .poster-container {
+  height: 200px;
+  width: 150px;
+}
+
+.movie-list-item .movie-poster {
+  max-height: 200px;
+  max-width: 150px;
+}
+
+.released-date {
+  margin-top: 20px;
+}
+
+
+
+#movie-details .movie-poster {
+  max-height: 350px;
+  max-width: 262px;
+}
+
+#movie-details .buttons {
+  text-align: center;
+}
+
+.movie-link {
+  color: inherit;
+}
+
+.movie-link:hover {
+  color: inherit;
+  text-decoration: none;
+}
+
+.bdge {
+  background-color:#F7CB06;
+}
